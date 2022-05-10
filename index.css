@@ -1,0 +1,18 @@
+
+body{
+    background-color: white;
+    margin: 0px;
+
+}
+
+.navegacion{
+    display: flex;
+    color: whitesmoke;
+    text-align: center;
+    margin: 0 10px 0 0;
+
+}
+
+.container{
+    background-color: black;
+}
