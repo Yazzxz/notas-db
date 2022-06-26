@@ -4,7 +4,7 @@ var con = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : '',
-  database : 'notas'
+  database : 'notas-db'
 });
 
 con.connect(function(err) {
@@ -13,9 +13,7 @@ con.connect(function(err) {
       
     }
     else{
-        console.log("se establecio la coneccion")
+        console.log("se establecio la conexion")
 
     }
 })
-
-con.query("INSERT INTO `notas` (`fecha`, `titulo`, `descripcion`, `tag`) VALUES ( NOW(), 'colegio', 'hay tarea?\r\n-preguntar si hay tarea', 'importante')")

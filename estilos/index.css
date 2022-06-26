@@ -1,0 +1,82 @@
+
+body{
+    background-color: rgb(65, 65, 65);
+    margin: 0;
+    padding: 0;
+
+}
+
+.agregar{
+    align-items: flex-end;
+}
+.logo a:hover{
+    text-decoration: none;
+  }
+.navs{
+    background-color: burlywood;
+    min-height: 10%;
+}
+#navegador ul{
+    list-style-type: none;
+}
+
+#navegador li{
+    display: inline;
+    margin: 0 10px 0 0;
+}
+
+ 
+
+.container{
+    background-color: black;
+
+}
+
+.notas{
+    margin-top: 50px;
+}
+.nota{
+    width: 600px;
+    background-color: darkslategray;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+
+.nota + .nota {
+    margin-top: 20px;
+}
+.titulo {
+    background-color: darkgray;
+}
+
+.barraInferior {
+overflow: hidden;
+width: 100%;
+}
+
+.barraInferior ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding-left: 30% ;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.barraInferior li {
+    float: left;
+    
+}
+
+.barraInferior li p {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+}

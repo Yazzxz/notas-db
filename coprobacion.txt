@@ -1,0 +1,18 @@
+con.query("SELECT nombre FROM tag", function(err,res,fld){
+        let esta = 0
+        res.forEach(resultado => {
+            //console.log(resultado)
+            if(resultado.nombre == req.body.tags){
+                esta = 1
+            }
+
+        });
+        console.log("Esta es igual a "+ esta)
+        if(esta > 0){
+            con.query("INSERT INTO `nota` (`fecha`, `titulo`, `descripcion`, `tag`) VALUES ( NOW(),'" + req.body.titulo + "', '" + req.body.descripcion + "','" + req.body.tags + "')")
+        }
+        if(esta == 0){
+            con.query("INSERT INTO `tag` (`nombre`) VALUE ('" + req.body.tags + "')")
+            con.query("INSERT INTO `nota` (`fecha`, `titulo`, `descripcion`, `tag`) VALUES ( NOW(),'" + req.body.titulo + "', '" + req.body.descripcion + "','" + req.body.tags + "')")         
+        }
+    })

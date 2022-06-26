@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="navs">
+        <div id="navegador">
+            <ul>
+                <li class="logo"><a href="">Notas</a></li>
+                <li class="agregar"><a href="./respuesta">Agregar Nota</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="notas">
+        <% usuarios.forEach(respuesta =>{  %>
+            <div class="nota" id="<%= respuesta.id %>">
+                <h1> <%= respuesta.titulo %> </h1>
+                <h2> <%= respuesta.descripcion %> </h2>
+                <a href="leer/<%= respuesta.id %>" name="<%= respuesta.id %>">Leer</a>
+                <a href="/borrado/<%= respuesta.id %>" name="<%= respuesta.id %>">Borrar</a>
+            </div>
+        <% })  %>
+    </div>
+
+
+    <div class="barraInferior">
+        <ul>
+            <li><p>Facundo Rojas</p></li>
+            <li><p>Thiago Becchi</p></li>
+            <li><p>Marcelo Monti</p></li>
+            <li><p>Maximo Allende</p></li>
+        </ul>
+    </div>
+</body>
+</html>
